@@ -71,8 +71,8 @@ RUN build_deps="curl gcc libc-dev libevent-dev libexpat1-dev make" && \
     tar xzf unbound.tar.gz && \
     rm -f unbound.tar.gz && \
     cd unbound-1.8.2 && \
-    groupadd _unbound && \
-    useradd -g _unbound -s /etc -d /dev/null _unbound && \
+    groupadd -g 59834 _unbound && \
+    useradd -g _unbound -u 59834 -s /etc -d /dev/null _unbound && \
     ./configure \
         --disable-dependency-tracking \
         --prefix=/opt/unbound \
